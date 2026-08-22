@@ -1,0 +1,28 @@
+### Gete the users
+GET http://localhost:3000/users
+
+### Create a new user
+POST http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "userName": "johndoe",
+    "email": "johndoe@gmail.com"
+}
+
+
+### Create a new post
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "title": "Lorem ipsum doolo 2",
+    "description": "this is a test description does not meant to be very big for testing"
+}
+
+
+### Get all posts
+GET http://localhost:3000/post
+Accept: application/json
