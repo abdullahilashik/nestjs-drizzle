@@ -154,3 +154,52 @@
 * **Chapter 4.4: Performance Tuning, Pooling & Read Replicas**
 * **Topics:** Connection pooling optimization, query benchmarking, prepared statements (`db.select().prepare()`), and read/write replica query splitting.
 * **Summary:** Optimize query execution times and scale database traffic across read replicas under heavy loads.
+
+
+
+
+--------------- 
+
+DNS
+
+mycompany.com
+│
+├── A
+├── AAAA
+├── CNAME
+├── MX
+├── TXT
+├── CAA
+│
+├── api.mycompany.com
+├── admin.mycompany.com
+├── staging.mycompany.com
+├── mail.mycompany.com
+│
+└── _acme-challenge.mycompany.com
+
+
+DNS configuration for mycompany.com
+
+@       A       3600        203.130.0.12
+@       AAAA    3600        2001:db8::12
+www     CNAME   3600        mycompany.coom.
+mail    A       3600        201.131.0.11
+@       MX      3600        10 mail.mycompany.com.
+api     A       3600        203.12.1.1
+admin   A       3600        203.12.1.2
+staging A       3600        203.12.1.3
+
+
+
+mycompany.com
+
+
+@       A       203.130.0.12
+@       AAAA    2001:db8:12
+www     CNAME   mycompany.com.
+mail    A       201.131.0.11
+@       MX      10 mail.mycompany.com.
+api     A       203.12.1.1
+admin   A       203.12.1.2
+staging A       203.12.1.3
