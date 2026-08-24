@@ -5,10 +5,8 @@ GET http://localhost:3000/users
 POST http://localhost:3000/users/create
 Content-Type: application/json
 
-{
-    "firstName": "John",
-    "lastName": "Doe",
-    "userName": "johndoe",
+{    
+    "username": "Doe",    
     "email": "johndoe@gmail.com"
 }
 
