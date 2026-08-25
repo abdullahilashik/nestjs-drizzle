@@ -15,6 +15,13 @@
       "when": 1787683142751,
       "tag": "0001_calm_lockheed",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1787685123261,
+      "tag": "0002_fair_sally_floyd",
+      "breakpoints": true
     }
   ]
 }

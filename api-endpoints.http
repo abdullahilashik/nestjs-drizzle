@@ -6,10 +6,19 @@ POST http://localhost:3000/users/create
 Content-Type: application/json
 
 {    
-    "password": "password",    
-    "email": "johndoe@gmail.com"
+    "password": "test1",    
+    "email": "johndoe1@gmail.com"
 }
 
+
+### Update user password
+PATCH http://localhost:3000/users/update
+Content-Type: application/json
+
+{    
+    "password": "test2",    
+    "email": "johndoe1@gmail.com"
+}
 
 ### Create a new post
 POST http://localhost:3000/posts/create
