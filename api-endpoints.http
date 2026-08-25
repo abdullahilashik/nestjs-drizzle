@@ -12,15 +12,16 @@ Content-Type: application/json
 
 
 ### Create a new post
-POST http://localhost:3000/post
+POST http://localhost:3000/posts/create
 Content-Type: application/json
 
 {
     "title": "Lorem ipsum doolo 2",
+    "slug": "test-1",
     "description": "this is a test description does not meant to be very big for testing"
 }
 
 
 ### Get all posts
-GET http://localhost:3000/post
+GET http://localhost:3000/posts
 Accept: application/json

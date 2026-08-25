@@ -4,6 +4,7 @@ import {z} from 'zod';
 
 export const insertPostsSchema = createInsertSchema(posts, {
     title: z.string().min(4, {message: 'Title should not be less than 4 character '}),
+    slug: z.string(),
     description: z.string().max(2000, {message: 'maximum 2k characters allowed'})
 });
 

@@ -7,7 +7,7 @@ import { pgTable } from "drizzle-orm/pg-core";
 export const posts = pgTable('posts', {
     id: serial('id').primaryKey(),
     title: text('title').notNull(),
-    slug: text('slug').$defaultFn(() => posts.title.replaceAll(' ', '-') ),
+    slug: text('slug'),
     description: text('description').notNull(),
     createdAt: timestamp('created_at').$defaultFn(() => new Date())
 });
